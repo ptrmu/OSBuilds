@@ -1,5 +1,5 @@
 # Base on build with opencv and GTSAM
-FROM ros2_buildopencvgtsam
+FROM dashing_opencvgtsam
 ENV DEBIAN_FRONTEND=noninteractive
 #
 # Get flock2 source
