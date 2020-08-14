@@ -1,3 +1,11 @@
-sudo echo "get sodo password"
-sudo docker build --tag ros2_dashing_base arm64_ros2_dashing_base
+# requires sudo privileges
+docker build --tag ros2_dashing_base - <<EOF
+# Use UBUNTU 18.04 for OS  
+FROM nvcr.io/nvidia/l4t-base:r32.4.3
+#
+# Upgrade the OS
+RUN apt-get update && \
+    apt-get upgrade -y
+EOF
+
 
